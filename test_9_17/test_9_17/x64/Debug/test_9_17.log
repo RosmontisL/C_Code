@@ -1,0 +1,12 @@
+﻿  add.c
+  test.c
+  正在生成代码...
+F:\VS2022\code\2025\test_9_17\test_9_17\test.c(90,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+      F:\VS2022\code\2025\test_9_17\test_9_17\test.c(90,9):
+      请考虑在格式字符串中使用“%zd”
+  
+F:\VS2022\code\2025\test_9_17\test_9_17\test.c(91,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+      F:\VS2022\code\2025\test_9_17\test_9_17\test.c(91,9):
+      请考虑在格式字符串中使用“%zd”
+  
+  test_9_17.vcxproj -> F:\VS2022\code\2025\test_9_17\x64\Debug\test_9_17.exe
