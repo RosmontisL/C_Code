@@ -1,0 +1,26 @@
+﻿  test.c
+F:\VS2022\code\2025\test_10_21\test_10_21\test.c(48,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+      F:\VS2022\code\2025\test_10_21\test_10_21\test.c(48,9):
+      请考虑在格式字符串中使用“%zd”
+  
+F:\VS2022\code\2025\test_10_21\test_10_21\test.c(49,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+      F:\VS2022\code\2025\test_10_21\test_10_21\test.c(49,9):
+      请考虑在格式字符串中使用“%zd”
+  
+F:\VS2022\code\2025\test_10_21\test_10_21\test.c(52,24): warning C4047: “函数”:“const char *”与“char (*)[7]”的间接级别不同
+F:\VS2022\code\2025\test_10_21\test_10_21\test.c(52,24): warning C4024: “strlen”: 形参和实参 1 的类型不同
+F:\VS2022\code\2025\test_10_21\test_10_21\test.c(52,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+      F:\VS2022\code\2025\test_10_21\test_10_21\test.c(52,9):
+      请考虑在格式字符串中使用“%zd”
+  
+F:\VS2022\code\2025\test_10_21\test_10_21\test.c(53,29): warning C4047: “函数”:“const char *”与“char (*)[7]”的间接级别不同
+F:\VS2022\code\2025\test_10_21\test_10_21\test.c(53,29): warning C4024: “strlen”: 形参和实参 1 的类型不同
+F:\VS2022\code\2025\test_10_21\test_10_21\test.c(53,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+      F:\VS2022\code\2025\test_10_21\test_10_21\test.c(53,9):
+      请考虑在格式字符串中使用“%zd”
+  
+F:\VS2022\code\2025\test_10_21\test_10_21\test.c(54,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+      F:\VS2022\code\2025\test_10_21\test_10_21\test.c(54,9):
+      请考虑在格式字符串中使用“%zd”
+  
+  test_10_21.vcxproj -> F:\VS2022\code\2025\test_10_21\x64\Debug\test_10_21.exe
