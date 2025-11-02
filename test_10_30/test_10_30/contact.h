@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<assert.h>
+#include<stdlib.h>
 
 #define MAX 100
 #define MAX_NAME 20
@@ -19,7 +20,7 @@ typedef struct PeoInfo //重命名
 	char addr[MAX_ADDR];
 }PeoInfo;
 
-//通信录
+//通讯录
 typedef struct Contact
 {
 	PeoInfo data[MAX];//存放人的信息
@@ -40,3 +41,10 @@ void DelContact(Contact* pc);
 
 //查找指定联系人
 void SearchContact(Contact* pc);
+
+//修改指定联系人信息
+void ModifyContact(Contact* pc);
+
+//排序联系人信息
+void SortContact(Contact* pc);
+

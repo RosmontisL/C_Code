@@ -100,3 +100,40 @@ void SearchContact(Contact* pc)
 			pc->data[pos].tele,
 			pc->data[pos].addr);
 }
+void ModifyContact(Contact* pc)
+{
+	assert(pc);
+	char name[MAX_NAME] = { 0 };
+	printf("请输入要修改人的姓名:>");
+	scanf("%s", name);
+	int pos = FindByName(pc, name);
+	if (pos == -1)
+	{
+		printf("要修改的人不存在\n");
+		return;
+	}
+	printf("要修改的人的信息已经找到，接下来开始修改\n");
+	//修改
+	printf("请输入姓名:>");
+	scanf("%s", pc->data[pos].name);
+	printf("请输入年龄:>");
+	scanf("%d", &(pc->data[pos].age));
+	printf("请输入性别:>");
+	scanf("%s", pc->data[pos].sex);
+	printf("请输入电话:>");
+	scanf("%s", pc->data[pos].tele);
+	printf("请输入地址:>");
+	scanf("%s", pc->data[pos].addr);
+	printf("修改成功\n");
+}
+//按照名字排序
+int cmp_by_name(const void* e1, const void* e2)
+{
+	return strcmp(((PeoInfo*)e1)->name, ((PeoInfo*)e2)->name);
+}
+void SortContact(Contact* pc)
+{
+	assert(pc);
+	qsort(pc->data, pc->count, sizeof(PeoInfo), cmp_by_name);
+	printf("排序成功\n");
+}
