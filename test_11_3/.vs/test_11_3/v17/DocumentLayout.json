@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\VS2022\\code\\2025\\test_11_3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3169A529-CDAC-4C9C-9B49-71B4F2035EC6}|test_11_3\\test_11_3.vcxproj|F:\\VS2022\\code\\2025\\test_11_3\\test_11_3\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3169A529-CDAC-4C9C-9B49-71B4F2035EC6}|test_11_3\\test_11_3.vcxproj|solutionrelative:test_11_3\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 389,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test.c",
+              "DocumentMoniker": "F:\\VS2022\\code\\2025\\test_11_3\\test_11_3\\test.c",
+              "RelativeDocumentMoniker": "test_11_3\\test.c",
+              "ToolTip": "F:\\VS2022\\code\\2025\\test_11_3\\test_11_3\\test.c",
+              "RelativeToolTip": "test_11_3\\test.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-03T13:04:54.957Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
