@@ -7,6 +7,43 @@
 //	pc->count = 0;
 //	memset(pc->data, 0, sizeof(pc->data));
 //}
+void CheckCapacity(Contact* pc)
+{
+	if (pc->count == pc->capacity)
+	{
+		PeoInfo* ptr = (PeoInfo*)realloc(pc->data, (pc->capacity + INC_SZ) * sizeof(PeoInfo));
+		if (ptr == NULL)
+		{
+			printf("AddContact:%s\n", strerror(errno));
+			return;
+		}
+		else
+		{
+			pc->data = ptr;
+			pc->capacity += INC_SZ;
+			printf("增容成功\n");
+		}
+	}
+}
+void LoadContact(Contact* pc)
+{
+	FILE* pfRead=fopen("Contact.txt", "rb");
+	if (pfRead == NULL)
+	{
+		perror("LoadContact");
+		return;
+	}
+	//读文件
+	PeoInfo tmp = { 0 };
+	while (fread(&tmp, sizeof(PeoInfo), 1, pfRead)==1)
+	{
+		CheckCapacity(pc);
+		pc->data[pc->count] = tmp;
+		pc->count++;
+	}
+	fclose(pfRead);
+	pfRead = NULL;
+}
 //动态版本
 int InitContact(Contact* pc)
 {
@@ -19,6 +56,9 @@ int InitContact(Contact* pc)
 		return 1;
 	}
 	pc->capacity = DEFAULT_SZ;
+	//加载文件中的信息到通讯录中
+	LoadContact(pc);
+	printf("当前通讯录中人数：%d\n", pc->count);
 	return 0;
 }
 
@@ -52,24 +92,7 @@ void DestroyContact(Contact* pc)
 //	pc->count++;
 //	printf("增加成功\n");
 //}
-void CheckCapacity(Contact* pc)
-{
-	if (pc->count == pc->capacity)
-	{
-		PeoInfo* ptr = (PeoInfo*)realloc(pc->data, (pc->capacity + INC_SZ) * sizeof(PeoInfo));
-		if (ptr == NULL)
-		{
-			printf("AddContact:%s\n", strerror(errno));
-			return;
-		}
-		else
-		{
-			pc->data = ptr;
-			pc->capacity += INC_SZ;
-			printf("增容成功\n");
-		}
-	}
-}
+
 //动态版本
 void AddContact(Contact* pc)
 {
@@ -198,4 +221,24 @@ void SortContact(Contact* pc)
 	assert(pc);
 	qsort(pc->data, pc->count, sizeof(PeoInfo), cmp_by_name);
 	printf("排序成功\n");
+}
+//保存通讯录
+void SaveContact(const Contact* pc)
+{
+	assert(pc);
+	FILE* pfWrite = fopen("Contact.txt", "wb");
+	if (pfWrite == NULL)
+	{
+		perror("SaveContact");
+		return;
+	}
+	//写文件 - 二进制的形式
+	int i = 0;
+	for (i = 0; i < pc->count; i++)
+	{
+		fwrite(pc->data + i, sizeof(PeoInfo), 1, pfWrite);
+	}
+
+	fclose(pfWrite);
+	pfWrite = NULL;
 }

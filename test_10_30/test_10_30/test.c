@@ -51,6 +51,7 @@ int main()
 			SortContact(&con);
 			break;
 		case EXIT:
+			SaveContact(&con);
 			DestroyContact(&con);
 			printf("�˳�ͨѶ¼\n");
 			break;
