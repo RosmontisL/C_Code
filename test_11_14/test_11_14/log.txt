@@ -1,0 +1,10 @@
+file:F:\VS2022\code\2025\test_11_14\test_11_14\test.c line:17 date:Nov 14 2025 time:20:36:45 0
+file:F:\VS2022\code\2025\test_11_14\test_11_14\test.c line:17 date:Nov 14 2025 time:20:36:45 1
+file:F:\VS2022\code\2025\test_11_14\test_11_14\test.c line:17 date:Nov 14 2025 time:20:36:45 2
+file:F:\VS2022\code\2025\test_11_14\test_11_14\test.c line:17 date:Nov 14 2025 time:20:36:45 3
+file:F:\VS2022\code\2025\test_11_14\test_11_14\test.c line:17 date:Nov 14 2025 time:20:36:45 4
+file:F:\VS2022\code\2025\test_11_14\test_11_14\test.c line:17 date:Nov 14 2025 time:20:36:45 5
+file:F:\VS2022\code\2025\test_11_14\test_11_14\test.c line:17 date:Nov 14 2025 time:20:36:45 6
+file:F:\VS2022\code\2025\test_11_14\test_11_14\test.c line:17 date:Nov 14 2025 time:20:36:45 7
+file:F:\VS2022\code\2025\test_11_14\test_11_14\test.c line:17 date:Nov 14 2025 time:20:36:45 8
+file:F:\VS2022\code\2025\test_11_14\test_11_14\test.c line:17 date:Nov 14 2025 time:20:36:45 9
