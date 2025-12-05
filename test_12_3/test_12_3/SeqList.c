@@ -51,7 +51,6 @@ void SeqListPushBack(SL* ps, SQDataType x)
 	ps->size++;
 }
 
-
 void SeqListPushFront(SL* ps, SQDataType x)
 {
 	SeqListCheckCapacity(ps);
@@ -64,8 +63,70 @@ void SeqListPushFront(SL* ps, SQDataType x)
 	ps->a[0] = x;
 	ps->size++;
 }
-void SeqListPopBack(SL* ps);
-void SeqListPopFront(SL* ps);
+
+void SeqListPopBack(SL* ps)
+{
+	assert(ps->size > 0);
+	//ps->a[ps->size - 1] = 0;
+	ps->size--;
+}
+
+void SeqListPopFront(SL* ps)
+{
+	assert(ps->size > 0);
+	int start = 1;
+	while (start < ps->size)
+	{
+		ps->a[start - 1] = ps->a[start];
+		start++;
+	}
+	ps->size--;
+}
+//任意位置插入
+void SeqListInsert(SL* ps, int pos, SQDataType x)
+{
+	assert(pos < ps->size);
+	SeqListCheckCapacity(ps);
+	int end = ps->size - 1;
+	while (end >= pos)
+	{
+		ps->a[end + 1] = ps->a[end];
+		end--;
+	}
+	ps->a[pos] = x;
+	ps->size++;
+}
+//任意位置删除
+void SeqListDelete(SL* ps, int pos)
+{
+	assert(pos < ps->size);
+	int start = pos + 1;
+	while (start < ps->size)
+	{
+		ps->a[start-1] = ps->a[start];
+		start++;
+	}
+	ps->size--;
+}
+//查找某一个值
+int SeqListFind(SL* ps, SQDataType x)
+{
+	int i = 0;
+	for (i = 0; i < ps->size; i++)
+	{
+		if (ps->a[i] == x)
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+//修改某一个值
+void SeqListModify(SL* ps, int pos, SQDataType x)
+{
+	assert(pos < ps->size);
+	ps->a[pos] = x;
+}
 
 void SeqListPrint(SL* ps)
 {
@@ -75,4 +136,11 @@ void SeqListPrint(SL* ps)
 		printf("%d ", ps->a[i]);
 	}
 	printf("\n");
+}
+void SeqListDestory(SL* ps)
+{
+	free(ps->a);
+	ps->a = NULL;
+	ps->capacity = 0;
+	ps->size = 0;
 }

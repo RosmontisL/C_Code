@@ -10,16 +10,54 @@ void TestSeqList1()
 	SeqListPushBack(&sl, 3);
 	SeqListPushBack(&sl, 4);
 	SeqListPushBack(&sl, 5);
-	SeqListPushBack(&sl, 6);
-	SeqListPushBack(&sl, 7);
-	SeqListPushBack(&sl, 8);
-	SeqListPushBack(&sl, 9);
-	SeqListPushBack(&sl, 10);
+
+	SeqListPushFront(&sl, 6);
+	SeqListPushFront(&sl, 7);
+	SeqListPushFront(&sl, 8);
+	SeqListPushFront(&sl, 9);
+	SeqListPushFront(&sl, 10);
 	
 	SeqListPrint(&sl);
+
+	SeqListPopBack(&sl);
+	SeqListPrint(&sl);
+
+	SeqListPopFront(&sl);
+	SeqListPrint(&sl);
+
+	SeqListDestory(&sl);
+}
+
+void TestSeqList2()
+{
+	SL sl;
+	SeqListInit(&sl);
+	SeqListPushBack(&sl, 1);
+	SeqListPushBack(&sl, 2);
+	SeqListPushBack(&sl, 3);
+	SeqListPushBack(&sl, 4);
+	SeqListPushBack(&sl, 5);
+	SeqListPushBack(&sl, 6);
+	SeqListPrint(&sl);
+
+	SeqListInsert(&sl, 1, 20);
+	SeqListPrint(&sl);
+
+	SeqListDelete(&sl, 1);
+	SeqListPrint(&sl);
+
+	SeqListDestory(&sl);
+}
+void menu()
+{
+	printf("*****************************");
+	printf("*****************************");
+	printf("*****************************");
+	printf("*****************************");
+	printf("*****************************");
 }
 int main()
 {
-	TestSeqList1();
+	TestSeqList2();
 	return 0;
 }

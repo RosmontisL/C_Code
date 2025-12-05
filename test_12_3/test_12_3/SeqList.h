@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#include<assert.h>
 //动态顺序表
 typedef int SQDataType;
 
@@ -14,7 +15,13 @@ typedef struct SeqList
 //增删查改
 void SeqListInit(SL* ps);
 void SeqListPrint(SL* ps);
+void SeqListDestory(SL* ps);
+
 void SeqListPushBack(SL* ps, SQDataType x);
 void SeqListPushFront(SL* ps, SQDataType x);
 void SeqListPopBack(SL* ps);
 void SeqListPopFront(SL* ps);
+void SeqListInsert(SL* ps,int pos, SQDataType x);
+void SeqListDelete(SL* ps,int pos);
+int SeqListFind(SL* ps, SQDataType x);
+void SeqListModify(SL* ps, int pos, SQDataType x);
